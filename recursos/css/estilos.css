@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: bisque;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    background-color: chocolate;
+    transition: all 0.4s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+
+    transition: all 0.4s ease-in-out;
+}
+
+header .logo img{
+    height: 80px;
+    transition: all 0.4s ease-in-out;
+}
+
+header nav {
+    float: right;
+    line-height: 100px;
+    transition: all 0.4s ease-in-out;
+}
+
+header nav a {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    transition: all 0.4s ease-in-out;
+}
+
+header nav a:hover {
+    background-color: bisque;
+    border-radius: 20px;
+    transition-duration: 0.5s;
+}
+
+.nav_img{
+    height: 35px;
+    width: 35px;
+}
+
+.nav_label, .nav_input{
+    display: none;
+    /* margin: 0 auto; */
+}
+
+.header2 {
+    position: fixed;
+    background-color: rgba(210, 105, 30, 0.7);
+    transition: all 0.4s ease-in-out;
+    z-index: 100;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.header2 .logo img{
+    margin-left: 0px;
+    max-height: 50px;
+
+}
+
+.header2 nav {
+    line-height: 50px;
+    transition: all 0.4s ease-in-out;
+    font-size: 8px;
+}
+
+/* Primer corte a 910px */
+@media screen and (max-width: 910px) {
+
+    header, .header2 {
+        /* width: 100%; */
+        flex-direction: column;
+        text-align: center;
+        line-height: 50px;
+        height: 120px;
+    }
+
+    .logo{
+        height: 45px;
+    }
+
+}
+
+
+/* Segundo corte a 600px */
+@media screen and (max-width: 600px) {
+
+    header, .header2 {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .logo{
+        align-items: center;
+    }
+
+.nav_label{
+    display: flex;
+    display: block;
+    cursor: pointer;
+    align-items: center;
+}
+
+.nav_menu{
+    display: none;
+    /* position: fixed;
+    top: 80px;
+    bottom: 0;
+    height: 200px; */
+}
+
+
+}
+
+
+/* Inicio */
+
+.containerinicio{
+    width: 100%;
+    height: 700px;
+    background-image: url(/recursos/img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.6;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.imginicio{
+    opacity: 1;
+}
+
+div img {
+    max-height: 500px;
+    max-width: 500px;
+}
+
+
+/* About Us */
+
+.containerabout {
+    display: flex;
+    padding: 0;
+    /* flex-wrap: nowrap; */
+    /* background-color: blue; */
+    height: 700px;
+    width: 100%;
+
+}
+
+.item {
+    background-color: burlywood;
+    font-size: 30px;
+    padding: 5%;
+    text-align: left;
+    font-weight: bold;
+    width: 50%;
+    justify-content: center;
+}
+
+.imagen {
+    background-image: url(/recursos/img/Relleno.jpg);
+    padding: 0;
+    height: 700px;
+    width: 50%;
+}
+
+
+/* Productos */
+
+section h3 {
+    font-family: cursive;
+}
+
+.container-especialidades {
+    /* width: 100%;
+    height: 100vh; */
+    background-color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    /* justify-content: stretch; */
+    /* grid-template-columns: auto; */
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+/* @media screen and (max-width: 400px) {
+    .box-especialidades img{
+        width: 400px;
+    }    
+} */
+
+.box-especialidades {
+    width: 250px;
+    /* width: 13%; */
+    height: 40vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    margin: 1.5%;
+    border-radius: 10px;
+}
+
+.box-especialidades img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    object-fit: inherit;
+    /* object-fit: contain; */
+}
+
+.box-especialidades .esconder {
+    width: 0%;
+    height: 40vh;
+    background-color: rgba(149, 149, 184, 0.473);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: .5s all;
+    /* text-align: center; */
+}
+
+.esconder h3 {
+    color: aliceblue;
+    font-size: 2.5em;
+}
+
+.box-especialidades:hover .esconder {
+    width: 100%;
+}
+
+/* img{
+	display: block;
+	border:0;
+	width: 100%;
+	height: auto;
+} */
+
+.menu2 > a {
+    text-decoration: none;
+}
+
+.menu2 > a:hover {
+    background-color: pink;
+}
+
+.menu2 > a:visited {
+    color: darkmagenta;
+}
+
+.menu2 > a:active {
+    color: red;
+}
+
+
+/* Reseñas */
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px; /*ancho máximo de la página*/
+    margin: 20px auto; /*auto permite centrar nuestra página en forma horizontal*/
+    display: grid;
+    gap: 20px; /*nos ahorramos tenes que poner márgenes entre los elementos*/
+
+    /*3 columnas: contenido (con 2 widgets) + sidebar*/
+    grid-template-columns: repeat(4,1fr);
+
+    /*4 filas: header, contenido, widgets, footer*/
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: "encabezado encabezado encabezado encabezado"
+                         "opinion1 opinion2 opinion3 sidebar"
+                         "opnion4 opinion5 opinion6 sidebar"
+                         "pie pie pie pie";
+}
+.encabezado{
+    background-color:chocolate ;
+}
+
+.contenedor > div,
+.contenedor .encabezado,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .pie {
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .encabezado{
+    background: chocolate;
+    color:brown;
+    grid-area: encabezado; 
+    text-align: center;
+    font-family: 'Ms Madi', cursive;
+    font-size: 2.5em;
+}
+
+.contenedor .contenido{
+    background: #fff;
+    grid-area: contenido; 
+}
+
+.contenedor .sidebar{
+    background: orange;
+    /*utilizamos flexbox para alinear el contenido*/
+    display: flex;
+    /* align-items: center;
+    justify-content:baseline ; */
+    background-image: url("/recursos/img/cafeHumeante.jpg");
+    grid-area: sidebar; 
+    max-width: 100% max-height=100%; 
+    object-fit: contain;
+}
+
+.contenedor .opinion1,
+.contenedor .opinion3,
+.contenedor .opinion4,
+.contenedor .opinion4,
+.contenedor .opinion5,
+.contenedor .opinion6,
+.contenedor .opinion2{
+    background: rgb(82, 109, 126);
+    color: white;
+    height: 100px;
+    /*utilizamos flexbox para alinear el contenido*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ms Madi', cursive;
+}
+
+.contenedor .widget-1{
+    grid-area: widget-1; 
+}
+
+.contenedor .widget-2{
+    grid-area: widget-2; 
+}
+
+.contenedor .pie{
+    background: chocolate;
+    color: brown;
+    grid-area: pie; 
+    text-align: center;
+    font-family: 'Ms Madi', cursive;
+    font-size: 2em;
+}
+
+@media screen and (max-width: 768px){
+    .contenedor{
+        grid-template-areas: "encabezado encabezado encabezado encabezado"
+                             "opinion1 opinion1 opinion2 sidebar"
+                             "opinion3 opinion4 opinion4 sidebar"
+                             "opinion5 opinion5 opinion6 sidebar"
+                             "pie pie pie pie";
+    }
+}
+
+@media screen and (max-width: 450px){
+    .contenedor{
+        grid-template-areas: "encabezado encabezado encabezado encabezado"
+        "opinion1 opinion1 opinion1 sidebar"
+        "opinion2 opinion2 opinion2 sidebar"
+        "opinion3 opinion3 opinion3 sidebar"
+        "opinion4 opinion4 opinion4 sidebar"
+        "opinio5 opinion5 opinion5 sidebar"
+        "opinion6 opinion6 opinion6 sidebar"
+        "pie pie pie pie";
+    }
+}
+/* Boton Ir Arriba */
+
+.ir_arriba{
+    display: inline-block;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    background: goldenrod;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 10%;
+}
