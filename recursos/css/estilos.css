@@ -6,6 +6,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 body {
@@ -220,8 +221,8 @@ div img {
 
 .item {
     background-color: burlywood;
-    font-size: 2.6vw;
-    padding: 5%;
+    font-size: 2.2vw;
+    padding: 4%;
     text-align: left;
     font-weight: bold;
     width: 50%;
