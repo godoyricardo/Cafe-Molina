@@ -146,7 +146,8 @@ header nav a:hover {
         justify-content: space-evenly;
         flex-direction: column;
         clip-path: circle(0 at center);
-        transition: clip-path 0.8s ease-in-out;
+        transition: clip-path 0.5s ease-in-out;
+        z-index: 100;
     }
 
     .nav_input:checked+.nav_menu {
