@@ -14,12 +14,7 @@ window.addEventListener('scroll', function () {
         Bt_arriba.style.display = 'inline-block';
 
     } else {
-        encabezado.classList.remove('header2')
-        encabezado.classList.add('header')
-        Bt_arriba.style.display = 'none';
-    }
-
-    if (posicion > 0 && windowWidth < 910) {
+        if (posicion > 0 && windowWidth < 910) {
         encabezado.classList.remove('header')
         encabezado.classList.add('header3')
 
@@ -27,7 +22,8 @@ window.addEventListener('scroll', function () {
 
     } else {
         encabezado.classList.remove('header3')
+        encabezado.classList.remove('header2')
         encabezado.classList.add('header')
         Bt_arriba.style.display = 'none';
-    }
+    }}
 })
