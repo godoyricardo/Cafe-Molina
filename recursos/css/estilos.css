@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -30,7 +30,7 @@ header {
     transition: all 0.4s ease-in-out;
 }
 
-header .logo img{
+header .logo img {
     height: 80px;
     transition: all 0.4s ease-in-out;
 }
@@ -59,13 +59,14 @@ header nav a:hover {
 }
 
 
-.nav_img{
+.nav_img {
     height: 60px;
     width: 60px;
     padding: 15px;
 }
 
-.nav_label, .nav_input{
+.nav_label,
+.nav_input {
     display: none;
     /* margin: 0 auto; */
 }
@@ -79,7 +80,12 @@ header nav a:hover {
     height: 50px;
 }
 
-.header2 .logo img{
+.header3 {
+    position: fixed;
+    z-index: 100;
+}
+
+.header2 .logo img {
     margin-left: 0px;
     max-height: 50px;
 
@@ -94,7 +100,8 @@ header nav a:hover {
 /* Primer corte a 910px */
 @media screen and (max-width: 910px) {
 
-    header, .header2 {
+    header,
+    .header2 {
         /* width: 100%; */
         flex-direction: column;
         text-align: center;
@@ -102,7 +109,7 @@ header nav a:hover {
         height: 120px;
     }
 
-    .logo{
+    .logo {
         height: 45px;
     }
 
@@ -112,29 +119,39 @@ header nav a:hover {
 /* Segundo corte a 600px */
 @media screen and (max-width: 600px) {
 
-    header, .header2 {
+    header,
+    .header2 {
         flex-direction: row;
         align-items: center;
     }
 
-    .logo{
+    .logo {
         align-items: center;
     }
 
-.nav_label{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    align-items: center;
-}
+    .nav_label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
 
-.nav_menu{
-    display: none;
-    /* position: fixed;
-    top: 80px;
-    bottom: 0;
-    height: 200px; */
-}
+    .nav_menu {
+        position: fixed;
+        top: 100px;
+        bottom: 0;
+        background: chocolate;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        clip-path: circle(0 at center);
+        transition: clip-path 0.8s ease-in-out;
+    }
+
+    .nav_input:checked+.nav_menu {
+        clip-path: circle(100% at center);
+    }
 
 
 }
@@ -142,7 +159,7 @@ header nav a:hover {
 
 /* Inicio */
 
-.containerinicio{
+.containerinicio {
     width: 100%;
     height: 700px;
     background-image: url(/recursos/img/fondo.jpg);
@@ -156,7 +173,7 @@ header nav a:hover {
     justify-content: center;
 }
 
-.imginicio{
+.imginicio {
     opacity: 1;
 }
 
@@ -168,24 +185,24 @@ div img {
 /* Primer corte a 910px */
 @media screen and (max-width: 910px) {
 
-.containerinicio{
+    .containerinicio {
 
-    height: 500px;
-}
-    
+        height: 500px;
     }
 
-    /* Segundo corte a 600px */
+}
+
+/* Segundo corte a 600px */
 @media screen and (max-width: 600px) {
 
-.containerinicio{
-    height: 300px;
-}
+    .containerinicio {
+        height: 300px;
+    }
 
-div img {
-    max-height: 300px;
-    max-width: 300px;
-}
+    div img {
+        max-height: 300px;
+        max-width: 300px;
+    }
 
 }
 
@@ -195,8 +212,6 @@ div img {
 .containerabout {
     display: flex;
     padding: 0;
-    /* flex-wrap: nowrap; */
-    /* background-color: blue; */
     height: 700px;
     width: 100%;
 
@@ -222,32 +237,32 @@ div img {
 /* Primer corte a 910px */
 @media screen and (max-width: 910px) {
 
-.containerabout{
-    height: 500px;
-}
+    .containerabout {
+        height: 500px;
+    }
 
-.item{
-    padding: 3%;
-}
+    .item {
+        padding: 3%;
+    }
 
-.imagen{
-    height: 500px;
-}
+    .imagen {
+        height: 500px;
+    }
 
 }
 
 /* Segundo corte a 600px */
 @media screen and (max-width: 600px) {
 
-    .containerabout{
+    .containerabout {
         height: 200px;
     }
 
-    .item{
+    .item {
         width: 100%;
     }
 
-    .imagen{
+    .imagen {
         display: none;
     }
 
@@ -329,48 +344,52 @@ section h3 {
 	height: auto;
 } */
 
-.menu2 > a {
+.menu2>a {
     text-decoration: none;
 }
 
-.menu2 > a:hover {
+.menu2>a:hover {
     background-color: pink;
 }
 
-.menu2 > a:visited {
+.menu2>a:visited {
     color: darkmagenta;
 }
 
-.menu2 > a:active {
+.menu2>a:active {
     color: red;
 }
 
 
 /* Reseñas */
 
-.contenedor{
+.contenedor {
     width: 90%;
-    max-width: 1000px; /*ancho máximo de la página*/
-    margin: 20px auto; /*auto permite centrar nuestra página en forma horizontal*/
+    max-width: 1000px;
+    /*ancho máximo de la página*/
+    margin: 20px auto;
+    /*auto permite centrar nuestra página en forma horizontal*/
     display: grid;
-    gap: 20px; /*nos ahorramos tenes que poner márgenes entre los elementos*/
+    gap: 20px;
+    /*nos ahorramos tenes que poner márgenes entre los elementos*/
 
     /*3 columnas: contenido (con 2 widgets) + sidebar*/
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     /*4 filas: header, contenido, widgets, footer*/
     grid-template-rows: repeat(4, auto);
 
     grid-template-areas: "encabezado encabezado encabezado encabezado"
-                         "opinion1 opinion2 opinion3 sidebar"
-                         "opnion4 opinion5 opinion6 sidebar"
-                         "pie pie pie pie";
-}
-.encabezado{
-    background-color:chocolate ;
+        "opinion1 opinion2 opinion3 sidebar"
+        "opnion4 opinion5 opinion6 sidebar"
+        "pie pie pie pie";
 }
 
-.contenedor > div,
+.encabezado {
+    background-color: chocolate;
+}
+
+.contenedor>div,
 .contenedor .encabezado,
 .contenedor .contenido,
 .contenedor .sidebar,
@@ -379,29 +398,29 @@ section h3 {
     border-radius: 4px;
 }
 
-.contenedor .encabezado{
+.contenedor .encabezado {
     background: chocolate;
-    color:brown;
-    grid-area: encabezado; 
+    color: brown;
+    grid-area: encabezado;
     text-align: center;
     font-family: 'Ms Madi', cursive;
     font-size: 2.5em;
 }
 
-.contenedor .contenido{
+.contenedor .contenido {
     background: #fff;
-    grid-area: contenido; 
+    grid-area: contenido;
 }
 
-.contenedor .sidebar{
+.contenedor .sidebar {
     background: orange;
     /*utilizamos flexbox para alinear el contenido*/
     display: flex;
     /* align-items: center;
     justify-content:baseline ; */
     background-image: url("/recursos/img/cafeHumeante.jpg");
-    grid-area: sidebar; 
-    max-width: 100% max-height=100%; 
+    grid-area: sidebar;
+    max-width: 100% max-height=100%;
     object-fit: contain;
 }
 
@@ -411,7 +430,7 @@ section h3 {
 .contenedor .opinion4,
 .contenedor .opinion5,
 .contenedor .opinion6,
-.contenedor .opinion2{
+.contenedor .opinion2 {
     background: rgb(82, 109, 126);
     color: white;
     height: 100px;
@@ -422,48 +441,49 @@ section h3 {
     font-family: 'Ms Madi', cursive;
 }
 
-.contenedor .widget-1{
-    grid-area: widget-1; 
+.contenedor .widget-1 {
+    grid-area: widget-1;
 }
 
-.contenedor .widget-2{
-    grid-area: widget-2; 
+.contenedor .widget-2 {
+    grid-area: widget-2;
 }
 
-.contenedor .pie{
+.contenedor .pie {
     background: chocolate;
     color: brown;
-    grid-area: pie; 
+    grid-area: pie;
     text-align: center;
     font-family: 'Ms Madi', cursive;
     font-size: 2em;
 }
 
-@media screen and (max-width: 768px){
-    .contenedor{
+@media screen and (max-width: 768px) {
+    .contenedor {
         grid-template-areas: "encabezado encabezado encabezado encabezado"
-                             "opinion1 opinion1 opinion2 sidebar"
-                             "opinion3 opinion4 opinion4 sidebar"
-                             "opinion5 opinion5 opinion6 sidebar"
-                             "pie pie pie pie";
+            "opinion1 opinion1 opinion2 sidebar"
+            "opinion3 opinion4 opinion4 sidebar"
+            "opinion5 opinion5 opinion6 sidebar"
+            "pie pie pie pie";
     }
 }
 
-@media screen and (max-width: 450px){
-    .contenedor{
+@media screen and (max-width: 450px) {
+    .contenedor {
         grid-template-areas: "encabezado encabezado encabezado encabezado"
-        "opinion1 opinion1 opinion1 sidebar"
-        "opinion2 opinion2 opinion2 sidebar"
-        "opinion3 opinion3 opinion3 sidebar"
-        "opinion4 opinion4 opinion4 sidebar"
-        "opinio5 opinion5 opinion5 sidebar"
-        "opinion6 opinion6 opinion6 sidebar"
-        "pie pie pie pie";
+            "opinion1 opinion1 opinion1 sidebar"
+            "opinion2 opinion2 opinion2 sidebar"
+            "opinion3 opinion3 opinion3 sidebar"
+            "opinion4 opinion4 opinion4 sidebar"
+            "opinio5 opinion5 opinion5 sidebar"
+            "opinion6 opinion6 opinion6 sidebar"
+            "pie pie pie pie";
     }
 }
+
 /* Boton Ir Arriba */
 
-.ir_arriba{
+.ir_arriba {
     display: inline-block;
     height: 50px;
     padding: 10px;
